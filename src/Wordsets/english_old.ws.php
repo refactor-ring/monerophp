@@ -1,13 +1,15 @@
 <?php
 
-namespace MoneroIntegrations\MoneroPhp\mnemonic;
+namespace MoneroIntegrations\MoneroPhp\Wordsets; 
+
+
 
 /*!
  * Older version of English word list and map.
  */
 
 
-class english_old implements wordset {
+class english_old implements Wordset {
 
     /* Returns name of wordset in the wordset's native language.
      * This is a human-readable string, and should be capitalized

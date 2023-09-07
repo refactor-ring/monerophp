@@ -1,8 +1,8 @@
 <?php
 
-namespace MoneroIntegrations\MoneroPhp\mnemonic;
+namespace MoneroIntegrations\MoneroPhp\Wordsets; 
 
-class italian implements wordset {
+class italian implements Wordset {
 
     /* Returns name of wordset in the wordset's native language.
      * This is a human-readable string, and should be capitalized
