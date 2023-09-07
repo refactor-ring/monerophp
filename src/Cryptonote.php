@@ -216,13 +216,14 @@ namespace MoneroIntegrations\MoneroPhp;
          *
          * @param string Public spend key
          * @param string Public view key
+         * @param int Network byte (12 = Mainnet, 35 = Testnet, 18 = Stagenet)
          *
          * @return string Base58 encoded Monero address
          */
-    public function encode_address($pSpendKey, $pViewKey)
+    public function encode_address($pSpendKey, $pViewKey, $networkByte = 12)
     {
         // mainnet network byte is 18 (0x12)
-        $data = "12" . $pSpendKey . $pViewKey;
+        $data = $networkByte . $pSpendKey . $pViewKey;
         $checksum = $this->keccak_256($data);
         $encoded  = $this->base58->encode($data . substr($checksum, 0, 8));
 	    
