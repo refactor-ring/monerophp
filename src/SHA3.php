@@ -143,6 +143,7 @@ class SHA3 {
 
 	private $phase = self::PHASE_INIT;
 	private $state; // byte array (string)
+    private $blockSize;
 	private $rateInBytes; // positive integer
 	private $suffix; // 8-bit unsigned integer
 	private $inputBuffer = ''; // byte array (string): max length = rateInBytes
